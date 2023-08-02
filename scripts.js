@@ -3,7 +3,7 @@ function incrementValue() {
     const apiKey = 'VD10YXRPSWG8P0O2'; // Replace YOUR_API_KEY with your actual ThingSpeak API Write Key
   
     const url = `https://api.thingspeak.com/update.json`;
-    const value = 1; // The value you want to increment (you can change this as needed)
+    const value = 0; // The value you want to increment (you can change this as needed)
   
     fetch(`${url}?api_key=${apiKey}&field1=${value}`)
       .then((response) => {
