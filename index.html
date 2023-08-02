@@ -1,12 +1,38 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>I'm confused!</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>I'm confused</title>
 </head>
 <body>
-  <button id="confusedButton" onclick="incrementValue()">I'm confused</button>
+  <button id="getRequestButton">Click Me!</button>
 
-  <script src="script.js"></script>
+  <script>
+    // Function to handle the button click event
+    function handleButtonClick() {
+      // Replace 'https://example.com/api/endpoint' with the actual URL of the API or endpoint you want to request
+      const url = 'https://api.thingspeak.com/update?api_key=VD10YXRPSWG8P0O2&field1=0';
+
+      // Perform the GET request using the fetch() API
+      fetch(url)
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error('Network response was not ok');
+          }
+          return response.json(); // If expecting JSON data, otherwise use response.text() or response.blob()
+        })
+        .then((data) => {
+          // Handle the response data here
+          console.log('Response data:', data);
+        })
+        .catch((error) => {
+          // Handle errors here
+          console.error('Error:', error);
+        });
+    }
+
+    // Add a click event listener to the button
+    const button = document.getElementById('getRequestButton');
+    button.addEventListener('click', handleButtonClick);
+  </script>
 </body>
 </html>
