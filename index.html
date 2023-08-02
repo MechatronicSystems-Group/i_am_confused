@@ -5,22 +5,8 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- <button id="confusedButton" onclick="incrementValue()">I'm confused</button>
+  <button id="confusedButton" onclick="incrementValue()">I'm confused</button>
 
-  <script src="script.js"></script> -->
-  <button onclick="increaseValue()">I'm confused</button>
-  <script>
-  function increaseValue() {
-  // Get the channel ID and API key from ThingSpeak
-  var channelID = "2232135";
-  var apiKey = "VD10YXRPSWG8P0O2";
-  
-  // Create a new ThingSpeak client
-  var client = new ThingSpeak.Client(channelID, apiKey);
-  
-  // Increase the value in the channel by 1
-  client.update(1);
-  }
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
