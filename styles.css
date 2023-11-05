@@ -9,7 +9,7 @@ body {
   button {
     padding: 10px;
     font-size: 120px;
-    background-color: orange;
+    background-color: rgb(255, 179, 38);
     color: white;
     border: none;
     cursor: pointer;
